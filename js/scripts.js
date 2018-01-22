@@ -9,25 +9,31 @@ $(document).ready(function(){
   var allTasks = [];
 
   $("form#new-list").submit(function(event) {
-
     event.preventDefault();
+
     var newItem = $("#to-do").val();
     var newTask = new Task(newItem, isComplete);
     allTasks.push(newTask);
 
     $("#checklist").show();
+    $(".blockquote").slideDown();
 
     for(index = allTasks.length; index <= allTasks.length; index +=1) {
       $("ul#list").append("<li id='" + index + "' class='item'>" + allTasks[index-1].item + "</li>");
     };
 
+    $("input#to-do").val("");
+
     $("ul#list").children("li").click(function() {
       $(this).remove();
-      console.log(index);
-      //allTasks[].isComplete = true;
+      var itemId = $(this).attr('id');
+      itemId = parseInt(itemId);
+      allTasks[itemId-1].isComplete = true;
     });
 
-    console.log(allTasks);
+    $(".blockquote").click(function() {
+      $(".blockquote").slideUp();
+    });
 
   });
 

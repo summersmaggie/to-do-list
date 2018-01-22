@@ -1,5 +1,8 @@
-#checklist {
+/*#checklist {
   display: none;
+}*/
+body {
+  background: url("../img/bg.jpg");
 }
 
 li.item {
@@ -8,4 +11,56 @@ li.item {
   background-color: #f9f9f9;
   margin-top: 20px;
   border: 2px dotted gray;
+  font-size: 14pt;
 }
+
+li.item:hover {
+  background-color: #157EFB;
+  color: #fff;
+}
+
+.container {
+  width: 650px;
+}
+
+#add-task {
+  display: block;
+  border-radius: 20px;
+  background-color: #F1F1F1;
+  padding: 30px;
+}
+
+#checklist {
+  margin-top: 10px;
+  display: block;
+  border-radius: 20px;
+  background-color: #F1F1F1;
+  padding: 30px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #F1F1F1;
+}
+
+.button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.blockquote {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 5px;
+  background-color: #bcdbff;
+}
+
+ul {
+  list-style:none;
+  padding-left:0;
+}​
