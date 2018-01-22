@@ -18,12 +18,16 @@ $(document).ready(function(){
     $("#checklist").show();
 
     for(index = allTasks.length; index <= allTasks.length; index +=1) {
-      $("ul#list").append("<li class='item'>" + allTasks[index-1].item + "</li>");
+      $("ul#list").append("<li id='" + index + "' class='item'>" + allTasks[index-1].item + "</li>");
     };
 
-    // $(".item").last().click(function() {
-    //   $(".item").fadeOut();
-    // });
+    $("ul#list").children("li").click(function() {
+      $(this).remove();
+      console.log(index);
+      //allTasks[].isComplete = true;
+    });
+
+    console.log(allTasks);
 
   });
 
