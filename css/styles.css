@@ -1,3 +1,11 @@
 #checklist {
   display: none;
 }
+
+li.item {
+  display: block;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  border: 2px dotted gray;
+}
